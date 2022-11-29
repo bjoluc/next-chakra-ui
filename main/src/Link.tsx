@@ -2,24 +2,23 @@ import {Link as ChakraLink, LinkProps as ChakraLinkProps} from "@chakra-ui/react
 import NextLink, {LinkProps as NextLinkProps} from "next/link";
 import React from "react";
 
-export type LinkProps = Omit<NextLinkProps, "as"> & ChakraLinkProps;
+export type LinkProps = Omit<NextLinkProps, "passHref" | "legacyBehavior"> &
+	Omit<ChakraLinkProps, "as">;
 
-// Has to be a new component because both Chakra UI and Next.js share the `as` property
+// Using Next's `legacyBehavior` flag due to https://github.com/chakra-ui/chakra-ui/issues/132
 export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
-	(
-		{href, replace, scroll, shallow, prefetch, locale, legacyBehavior, children, ...chakraProps},
-		ref
-	) => {
+	({href, as, replace, scroll, shallow, prefetch, locale, children, ...chakraProps}, ref) => {
 		return (
 			<NextLink
 				passHref
+				legacyBehavior
 				href={href}
+				as={as}
 				replace={replace}
 				scroll={scroll}
 				shallow={shallow}
 				prefetch={prefetch}
 				locale={locale}
-				legacyBehavior={legacyBehavior}
 			>
 				<ChakraLink ref={ref} {...chakraProps}>
 					{children}

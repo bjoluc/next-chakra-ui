@@ -9,12 +9,15 @@ describe("Link", () => {
 		expect(asFragment()).toMatchInlineSnapshot(`
 			<DocumentFragment>
 			  <a
-			    class="chakra-button css-1d0ox2v"
-			    href="/#destination"
+			    class="chakra-button css-i857na"
+			    href="#destination"
 			  >
 			    Caption
 			  </a>
-			  <span />
+			  <span
+			    hidden=""
+			    id="__chakra_env"
+			  />
 			</DocumentFragment>
 		`);
 	});

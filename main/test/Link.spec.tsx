@@ -10,11 +10,14 @@ describe("Link", () => {
 			<DocumentFragment>
 			  <a
 			    class="chakra-link css-spn4bz"
-			    href="/#destination"
+			    href="#destination"
 			  >
 			    Caption
 			  </a>
-			  <span />
+			  <span
+			    hidden=""
+			    id="__chakra_env"
+			  />
 			</DocumentFragment>
 		`);
 	});

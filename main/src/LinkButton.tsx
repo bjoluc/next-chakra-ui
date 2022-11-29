@@ -2,26 +2,24 @@ import {Button, ButtonProps} from "@chakra-ui/react";
 import {HTMLChakraProps} from "@chakra-ui/system";
 import NextLink, {LinkProps as NextLinkProps} from "next/link";
 import React from "react";
-import {Except} from "type-fest";
 
-export type LinkButtonProps = Except<NextLinkProps, "as"> & HTMLChakraProps<"a"> & ButtonProps;
+export type LinkButtonProps = Omit<NextLinkProps, "passHref" | "legacyBehavior"> &
+	Omit<HTMLChakraProps<"a"> & ButtonProps, "as">;
 
-// Has to be a new component because both Chakra UI and Next.js share the `as` property
+// Using Next's `legacyBehavior` flag due to https://github.com/chakra-ui/chakra-ui/issues/132
 export const LinkButton = React.forwardRef<HTMLAnchorElement, LinkButtonProps>(
-	(
-		{href, replace, scroll, shallow, prefetch, locale, legacyBehavior, children, ...chakraProps},
-		ref
-	) => {
+	({href, as, replace, scroll, shallow, prefetch, locale, children, ...chakraProps}, ref) => {
 		return (
 			<NextLink
 				passHref
+				legacyBehavior
 				href={href}
+				as={as}
 				replace={replace}
 				scroll={scroll}
 				shallow={shallow}
 				prefetch={prefetch}
 				locale={locale}
-				legacyBehavior={legacyBehavior}
 			>
 				{/* @ts-expect-error the ref type is HTMLAnchorElement, not HTMLButtonElement */}
 				<Button ref={ref} as="a" {...chakraProps}>
