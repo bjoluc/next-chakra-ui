@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/bjoluc/next-chakra-ui/compare/v2.0.0...v2.0.1) (2022-11-29)
+
+
+### Bug Fixes
+
+* Remove `"type": "module"` flag from `package.json` ([33d4d23](https://github.com/bjoluc/next-chakra-ui/commit/33d4d237202c466efad2a8f14be9eed29ae971e8))
+
 ## [2.0.0](https://github.com/bjoluc/next-chakra-ui/compare/v1.0.0...v2.0.0) (2022-11-29)
 
 
