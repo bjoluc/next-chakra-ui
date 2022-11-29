@@ -2,6 +2,7 @@
 	"name": "next-chakra-ui",
 	"version": "1.0.0",
 	"description": "Chakra UI React components for Next.js",
+	"type": "module",
 	"main": "dist/index.js",
 	"typings": "dist/index.d.ts",
 	"files": [
@@ -16,11 +17,11 @@
 		"test": "tests"
 	},
 	"scripts": {
-		"start": "tsdx watch",
-		"test": "tsdx test --coverage",
+		"start": "tsup-node --watch",
+		"test": "jest test --coverage",
 		"test:watch": "npm run test -- --watch",
 		"tsc": "tsc",
-		"build": "tsdx build",
+		"build": "tsup-node",
 		"prepare": "husky install && npm run build",
 		"lint": "xo"
 	},
@@ -48,11 +49,22 @@
 		"@types/react": "^18.0.15",
 		"framer-motion": "^6.5.1",
 		"husky": "^8.0.1",
+		"jest-environment-jsdom": "^28.1.3",
 		"lint-staged": "13.0.3",
 		"next": "^12.2.2",
-		"tsdx": "^0.14.1",
 		"tslib": "^2.4.0",
+		"tsup": "^6.2.2",
 		"typescript": "^4.7.4"
+	},
+	"tsup": {
+		"entry": [
+			"src/index.ts"
+		],
+		"format": "esm",
+		"target": "node16",
+		"clean": true,
+		"sourcemap": true,
+		"dts": true
 	},
 	"xo": {
 		"extends": "@bjoluc/xo-next",
@@ -60,6 +72,12 @@
 		"rules": {}
 	},
 	"prettier": "@bjoluc/eslint-config-xo-next/prettier.config",
+	"importSort": {
+		".ts, .tsx, .js, .jsx": {
+			"style": "module",
+			"parser": "typescript"
+		}
+	},
 	"lint-staged": {
 		"**/*.{ts,tsx}": [
 			"xo --fix"
@@ -67,5 +85,10 @@
 	},
 	"release": {
 		"extends": "@bjoluc/semantic-release-config-npm"
+	},
+	"dependencies": {
+		"@types/jest": "^28.1.6",
+		"jest": "^28.1.3",
+		"ts-jest": "^28.0.7"
 	}
 }
