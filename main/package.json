@@ -2,7 +2,6 @@
 	"name": "next-chakra-ui",
 	"version": "2.0.0",
 	"description": "Chakra UI React components for Next.js",
-	"type": "module",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
 	"typings": "dist/index.d.ts",
