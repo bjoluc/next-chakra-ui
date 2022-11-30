@@ -2,7 +2,7 @@
 
 [![npm (tag)](https://img.shields.io/npm/v/next-chakra-ui/latest)](https://www.npmjs.com/package/next-chakra-ui)
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/bjoluc/next-chakra-ui/build)](https://github.com/bjoluc/next-chakra-ui/actions)
-[![codecov](https://codecov.io/gh/bjoluc/next-chakra-ui/branch/master/graph/badge.svg)](https://codecov.io/gh/bjoluc/next-chakra-ui)
+[![codecov](https://codecov.io/gh/bjoluc/next-chakra-ui/branch/main/graph/badge.svg)](https://codecov.io/gh/bjoluc/next-chakra-ui)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
