@@ -1,19 +1,18 @@
 import React from "react";
 
-import {LinkButton} from "../src";
+import {LinkIconButton} from "../src";
 import {render} from "./renderer";
 
-describe("LinkButton", () => {
+describe("LinkIconButton", () => {
 	it("matches snapshot", () => {
-		const {asFragment} = render(<LinkButton href="#destination">Caption</LinkButton>);
+		const {asFragment} = render(<LinkIconButton href="#destination" aria-label="label" />);
 		expect(asFragment()).toMatchInlineSnapshot(`
 			<DocumentFragment>
 			  <a
-			    class="chakra-button css-i857na"
+			    aria-label="label"
+			    class="chakra-button css-eeqq40"
 			    href="#destination"
-			  >
-			    Caption
-			  </a>
+			  />
 			  <span
 			    hidden=""
 			    id="__chakra_env"

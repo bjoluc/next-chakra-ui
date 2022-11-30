@@ -22,5 +22,6 @@ npm install next-chakra-ui
 
 ## Components
 
-* [`Link`](src/Link.tsx): A Chakra UI [`Link`](https://chakra-ui.com/docs/components/link) component wrapped in a [`next/link`](https://nextjs.org/docs/api-reference/next/link)
-* [`LinkButton`](src/LinkButton.tsx): A Chakra UI [`Button`](https://chakra-ui.com/docs/components/button) component wrapped in a [`next/link`](https://nextjs.org/docs/api-reference/next/link). It renders an HTML anchor element without composing Chakra UI's `Link`, so the button styling remains untouched.
+- [`Link`](main/src/Link.tsx): A Chakra UI [`Link`](https://chakra-ui.com/docs/components/link) component wrapped in a [`next/link`](https://nextjs.org/docs/api-reference/next/link)
+- [`LinkButton`](main/src/LinkButton.tsx): A Chakra UI [`Button`](https://chakra-ui.com/docs/components/button) component wrapped in a [`next/link`](https://nextjs.org/docs/api-reference/next/link). It renders an HTML anchor element without composing Chakra UI's `Link`, so the button styling remains untouched.
+- [`LinkIconButton`](main/src/LinkIconButton.tsx): A Chakra UI [`IconButton`](https://chakra-ui.com/docs/components/icon-button) component wrapped in a [`next/link`](https://nextjs.org/docs/api-reference/next/link). It renders an HTML anchor element without composing Chakra UI's `Link`, so the button styling remains untouched.
