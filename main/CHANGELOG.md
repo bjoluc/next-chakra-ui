@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.0](https://github.com/bjoluc/next-chakra-ui/compare/v2.0.1...v2.1.0) (2022-11-30)
+
+
+### Features
+
+* Add `LinkIconButton` component ([8692a30](https://github.com/bjoluc/next-chakra-ui/commit/8692a30979dbd2e99a4195e6cc63a566132c0e9a))
+
 ## [2.0.1](https://github.com/bjoluc/next-chakra-ui/compare/v2.0.0...v2.0.1) (2022-11-29)
 
 
